@@ -5,86 +5,83 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { Button } from '@mui/material';
+import { Container } from '@mui/system';
+import FormattedInputs from './idCard';
+import BasicSelect from './dropdown';
+import {PartySelect} from './dropdown'
 
 export default function AddressForm() {
   return (
     <React.Fragment>
-      <Typography variant="h6" gutterBottom>
-        Shipping address
+      <Container sx={{bgcolor:' '}}>
+      <Typography variant="h6"  gutterBottom>
+        ADD VOTER INFO
       </Typography>
-      <Grid container spacing={3}>
-        <Grid item xs={12} sm={6}>
-          <TextField
+      <Grid  container spacing={3}>
+        <Grid item xs={12} sm={3}>
+        <TextField
             required
-            id="firstName"
-            name="firstName"
-            label="First name"
+            id="name"
+            name="Name"
+            label="Name"
             fullWidth
             autoComplete="given-name"
-            variant="standard"
+            variant="outlined"
+            color="secondary" 
           />
+
+        </Grid>
+        <Grid item xs={12} sm={3}>
+          <TextField
+            required
+            id="fatherName"
+            name="Father name"
+            label="Father name"
+            fullWidth
+            autoComplete="given-name"
+            variant="outlined"
+            color="secondary" 
+          />
+        </Grid>
+        <Grid item xs={12} sm={3}>
+        <TextField
+            required
+            id="idcard"
+            type='number'
+            name="ID Card"
+            label="ID Card"
+            fullWidth
+            autoComplete="given-name"
+            variant="outlined"
+            color="secondary" 
+          />
+          
+          
+          
+        </Grid>
+        <Grid item xs={12} sm={3}>
+        <FormattedInputs/>
+        </Grid>
+        <Grid container spacing={3}></Grid>
+        
+        
+        
+        <Grid item xs={12} sm={6}>
+        <BasicSelect/>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+        <PartySelect/>
         </Grid>
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="lastName"
-            name="lastName"
-            label="Last name"
-            fullWidth
-            autoComplete="family-name"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            required
-            id="address1"
-            name="address1"
-            label="Address line 1"
-            fullWidth
-            autoComplete="shipping address-line1"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12}>
-          <TextField
-            id="address2"
-            name="address2"
-            label="Address line 2"
-            fullWidth
-            autoComplete="shipping address-line2"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="city"
-            name="city"
-            label="City"
-            fullWidth
-            autoComplete="shipping address-level2"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            id="state"
-            name="state"
-            label="State/Province/Region"
-            fullWidth
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="zip"
-            name="zip"
-            label="Zip / Postal code"
+            id="cast"
+            name="Cast"
+            label="Cast"
             fullWidth
             autoComplete="shipping postal-code"
-            variant="standard"
+            variant="outlined"
+            color="secondary"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -95,19 +92,21 @@ export default function AddressForm() {
             label="Country"
             fullWidth
             autoComplete="shipping country"
-            variant="standard"
+            variant="outlined"
+            color="secondary"
           />
         </Grid>
         <Grid item xs={12}>
           <FormControlLabel
             control={<Checkbox color="secondary" name="saveAddress" value="yes"  />
             }
-            label="Use this address for payment details"
+            label="Use this address for further details"
 
            />
-           <Button type='submit' variant='contained'>submit</Button>
+           <Button type='submit' variant='contained'>Submit</Button>
         </Grid>
       </Grid>
+      </Container>
     </React.Fragment>
   );
 }
