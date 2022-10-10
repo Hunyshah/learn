@@ -19,7 +19,6 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { mainListItems, secondaryListItems } from '../components/listitems';
 import Orders from './Orders';
-import AddressForm from './addressForm';
 import MultipleSelectCheckmarks from './Tag'
 function Copyright(props) {
   return (
@@ -169,9 +168,11 @@ function DashboardContent() {
                     display: 'flex',
                     flexDirection: 'column',
                     height: 500,
+                    backgroundImage:"url(https://images.unsplash.com/photo-1466780446965-2072a3de8a43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80)",backgroundRepeat: 'no-repeat',backgroundSize: 'cover',
+
                   }}
                 >
-                  <AddressForm/>
+                  
 
                 </Paper>
               </Grid>
