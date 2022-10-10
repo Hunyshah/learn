@@ -7,19 +7,21 @@ import Checkbox from '@mui/material/Checkbox';
 import { Button } from '@mui/material';
 import { Container } from '@mui/system';
 import FormattedInputs from './idCard';
-
+import BasicSelect from './dropdown';
 import {PartySelect} from './dropdown'
 import { Link } from "react-router-dom";
 
-export default function AddressForm() {
+export default function VillageForm() {
   return (
     <React.Fragment>
       <Container sx={{bgcolor:' '}}>
       <Typography variant="h6"  gutterBottom>
-        ADD VOTER INFO
+        ADD Village INFO
       </Typography>
       <Grid  container spacing={3}>
+      
         <Grid item xs={12} sm={3}>
+          
         <TextField
             required
             id="name"
@@ -33,11 +35,12 @@ export default function AddressForm() {
 
         </Grid>
         <Grid item xs={12} sm={3}>
+
           <TextField
             required
-            id="fatherName"
-            name="Father name"
-            label="Father name"
+            id="uc"
+            name="U-C# 95"
+            label="U-C 95"
             fullWidth
             autoComplete="given-name"
             variant="outlined"
@@ -47,10 +50,10 @@ export default function AddressForm() {
         <Grid item xs={12} sm={3}>
         <TextField
             required
-            id="idcard"
-            type='number'
-            name="ID Card"
-            label="ID Card"
+            id="kawwgo"
+        
+            name="Kauw go# name"
+            label="Kauw go"
             fullWidth
             autoComplete="given-name"
             variant="outlined"
@@ -64,15 +67,18 @@ export default function AddressForm() {
         <FormattedInputs/>
         </Grid>
         <Grid container spacing={3}></Grid>
+        <Grid item xs={12} sm={4}>
+        <BasicSelect/>
+          
+        </Grid>
         
         
-        
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={4}>
         <TextField
             required
-            id="Ward"
-            name="Ward #No"
-            label="Ward No"
+            id="numberdaar"
+            name="NumberDaar"
+            label="Numberdaar"
             fullWidth
             autoComplete="given-name"
             variant="outlined"
@@ -80,7 +86,7 @@ export default function AddressForm() {
           />
           
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={4}>
         <PartySelect/>
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -98,11 +104,11 @@ export default function AddressForm() {
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="village"
-            name="Village"
-            label="Village"
+            id="personality"
+            name="Main Personality"
+            label="Main Personality"
             fullWidth
-            autoComplete="Village"
+            autoComplete="Personality"
             variant="outlined"
             color="secondary"
           />

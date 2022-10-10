@@ -15,7 +15,7 @@ export default function BasicSelect() {
   return (
     <Box sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">V / W</InputLabel>
+        <InputLabel id="demo-simple-select-label">N-A 96 P-P 100 P-P 99</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
@@ -23,8 +23,9 @@ export default function BasicSelect() {
           label="Age"
           onChange={handleChange}
         >
-          <MenuItem value={10}>Village</MenuItem>
-          <MenuItem value={20}>Ward</MenuItem>
+          <MenuItem value={10}>N-A  96</MenuItem>
+          <MenuItem value={20}>P-P  100</MenuItem>
+          <MenuItem value={30}>P-P  99</MenuItem>
           
         </Select>
       </FormControl>
