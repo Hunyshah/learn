@@ -4,31 +4,24 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { TextField } from '@mui/material';
 
 export default function BasicSelect() {
-  const [age, setAge] = React.useState('');
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+
 
   return (
     <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">N-A 96 P-P 100 P-P 99</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={age}
-          label="Age"
-          onChange={handleChange}
-        >
-          <MenuItem value={10}>N-A  96</MenuItem>
-          <MenuItem value={20}>P-P  100</MenuItem>
-          <MenuItem value={30}>P-P  99</MenuItem>
-          
-        </Select>
-      </FormControl>
+            <TextField
+            required
+            id="ppnn"
+            name="ppnn"
+            label="NA-96 PP-100"
+            fullWidth
+            autoComplete="given-name"
+            variant="outlined"
+            color="secondary" 
+          />
     </Box>
   );
 }
