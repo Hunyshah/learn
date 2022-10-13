@@ -57,6 +57,7 @@ export  function PartySelect() {
             <MenuItem value={20}>PTI</MenuItem>
             <MenuItem value={30}>PPP</MenuItem>
             <MenuItem value={40}>TLP</MenuItem>
+            <MenuItem value={40}>Other</MenuItem>
             
           </Select>
         </FormControl>
