@@ -10,10 +10,12 @@ import FormattedInputs from './idCard';
 import BasicSelect from './dropdown';
 import {PartySelect} from './dropdown'
 import { Link } from "react-router-dom";
+import NavBarr from './navbarr';
 
 export default function VillageForm() {
   return (
     <React.Fragment>
+      <NavBarr>
       <Container sx={{bgcolor:' '}}>
       <Typography variant="h6"  gutterBottom>
         ADD Village INFO
@@ -120,10 +122,11 @@ export default function VillageForm() {
             label="Use this address for further details"
 
            />
-           <Button type='submit' variant='contained'><Link to='/' style={{ textDecoration: 'none',color:'white',}}>Submit</Link></Button>
+           <Button type='submit' variant='contained'><Link to='/dash' style={{ textDecoration: 'none',color:'white',}}>Submit</Link></Button>
         </Grid>
       </Grid>
       </Container>
+      </NavBarr>
     </React.Fragment>
   );
 }
